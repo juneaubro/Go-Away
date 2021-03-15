@@ -224,7 +224,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 343.107, y: 59.567}
+  m_SizeDelta: {x: 472.1266, y: 59.567}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406508535
 MonoBehaviour:
@@ -259,7 +259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is the game
+  m_Text: This is the block game
 --- !u!222 &406508536
 CanvasRenderer:
   m_ObjectHideFlags: 0
