@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public void PlayBlocks()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("BlockApples");
+    }
+
+    public void PlayReaction()
+    {
+        SceneManager.LoadScene("ReactionTime");
     }
 
     public void QuitGame()
