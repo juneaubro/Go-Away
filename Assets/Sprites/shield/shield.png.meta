@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: dce2485afc02763429491e69b69db045
+guid: 1e7f28261b44b5c48a7577c87d49bffa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8913045925950967760
-    second: SteamMan_death_0
-  - first:
-      213: -1992140375118942715
-    second: SteamMan_death_1
-  - first:
-      213: 7265492052769299911
-    second: SteamMan_death_2
-  - first:
-      213: 6251927883232071213
-    second: SteamMan_death_3
-  - first:
-      213: 8860649773301482043
-    second: SteamMan_death_4
-  - first:
-      213: -7038000109066326460
-    second: SteamMan_death_5
+      213: 2389193319765324094
+    second: shield_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,127 +130,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SteamMan_death_0
+      name: shield_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 0
-        width: 20
-        height: 36
+        x: 5
+        y: 6
+        width: 15
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 1, z: 0, w: 6}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dfcc0bdb0081bb70800000000000000
-      internalID: 8913045925950967760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_death_1
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 0
-        width: 20
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50e625632ee7a54e0800000000000000
-      internalID: -1992140375118942715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_death_2
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 0
-        width: 22
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cddcbb178634d460800000000000000
-      internalID: 7265492052769299911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_death_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 30
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2e4861294f43c650800000000000000
-      internalID: 6251927883232071213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_death_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 39
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b32c7c8e50a57fa70800000000000000
-      internalID: 8860649773301482043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_death_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 40
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44ee0f19030045e90800000000000000
-      internalID: -7038000109066326460
+      spriteID: e3139547aae182120800000000000000
+      internalID: 2389193319765324094
       vertices: []
       indices: 
       edges: []

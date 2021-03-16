@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class AppleSpawn : MonoBehaviour
 {
-    float integer = 2f;
-    bool pause =  !false;
-    float appleSpeed = .3f;
     public GameObject apple;
+    bool pause = !false;
     float appleDelay = 2f;
+    float appleSpeed = .3f;
+    float delayTime = 2f;
     public float minX, maxX, minY, maxY;
     void Start()
     {
@@ -44,22 +44,23 @@ public class AppleSpawn : MonoBehaviour
             default:
                 break;
         }
+        // RECURSION BBY
         Invoke("SpawnApple", appleDelay);
     }
 
     public void Update()
     {
         if(pause && appleDelay > 0.3f)
-        StartCoroutine(appleSpeedIncrease());
+            StartCoroutine(appleSpeedIncrease());
     }
 
     public IEnumerator appleSpeedIncrease()
     {
         //NO TOUCH GO AWAY
         pause = !pause;
-        yield return new WaitForSecondsRealtime(integer);
-        integer *= 2;
-        Debug.Log(integer +  " : " + appleDelay);
+        yield return new WaitForSecondsRealtime(delayTime);
+        delayTime *= 2;
+        Debug.Log(delayTime +  " : " + appleDelay);
         appleDelay -= .3f;
         pause = !pause;
     }
