@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/BlockApples.unity
     guid: db29e9d68820e1f44bbb63a8532c330c
   - enabled: 1
-    path: Assets/Scenes/ReactionTime.unity
+    path: Assets/Scenes/ReactionTimeLevel1.unity
     guid: cb02ffa0c4750a941be589e81587dcd4
   m_configObjects: {}

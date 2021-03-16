@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayReaction()
     {
-        SceneManager.LoadScene("ReactionTime");
+        SceneManager.LoadScene("ReactionTimeLevel1");
     }
 
     public void QuitGame()
