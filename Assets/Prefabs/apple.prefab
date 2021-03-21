@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2242416995872163416}
   - component: {fileID: 2242416995872163417}
-  - component: {fileID: 2242416995872163422}
-  - component: {fileID: 5594834956571943002}
   - component: {fileID: 6184064609022200562}
+  - component: {fileID: 5176978320150809871}
+  - component: {fileID: 6140996796018082512}
   m_Layer: 0
   m_Name: apple
   m_TagString: Apples
@@ -85,67 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2242416995872163422
-PolygonCollider2D:
+--- !u!114 &6184064609022200562
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2242416995872163423}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 0.15, y: 0.15}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.13807666, y: 0.2156114}
-      - {x: -0.18253767, y: 0.1888358}
-      - {x: -0.1591925, y: 0.15865129}
-      - {x: -0.14131488, y: 0.13370188}
-      - {x: -0.15377298, y: 0.110627234}
-      - {x: -0.16750145, y: 0.09063017}
-      - {x: -0.18013757, y: 0.07033628}
-      - {x: -0.19253774, y: 0.055041954}
-      - {x: -0.1966508, y: 0.028038502}
-      - {x: -0.19767648, y: 0.01531738}
-      - {x: -0.19859374, y: -0.007012844}
-      - {x: -0.19500357, y: -0.032259822}
-      - {x: -0.19283962, y: -0.047572017}
-      - {x: -0.18610156, y: -0.06591427}
-      - {x: -0.101373546, y: -0.15322445}
-      - {x: -0.03199184, y: -0.19194382}
-      - {x: 0.0382998, y: -0.19396983}
-      - {x: 0.08675614, y: -0.16462594}
-      - {x: 0.11111808, y: -0.14698547}
-      - {x: 0.121378064, y: -0.14202225}
-      - {x: 0.13369618, y: -0.12949687}
-      - {x: 0.16020936, y: -0.102537684}
-      - {x: 0.18364291, y: -0.046732605}
-      - {x: 0.18814388, y: -0.02745992}
-      - {x: 0.18581364, y: 0.014213622}
-      - {x: 0.18014349, y: 0.055003464}
-      - {x: 0.17075333, y: 0.087516725}
-      - {x: 0.1520603, y: 0.114179246}
-      - {x: 0.1273675, y: 0.1327917}
-      - {x: 0.08830474, y: 0.14537573}
-      - {x: 0.050982684, y: 0.15164131}
-      - {x: 0.012779057, y: 0.14865273}
-      - {x: -0.02877742, y: 0.1393053}
-      - {x: -0.046976745, y: 0.13323712}
-      - {x: -0.09149078, y: 0.1783585}
---- !u!50 &5594834956571943002
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433ce67e576391447a463f85ca53b13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &5176978320150809871
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -159,22 +111,26 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6184064609022200562
-MonoBehaviour:
+--- !u!58 &6140996796018082512
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2242416995872163423}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 433ce67e576391447a463f85ca53b13f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25

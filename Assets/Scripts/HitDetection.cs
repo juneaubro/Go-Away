@@ -4,35 +4,30 @@ using UnityEngine;
 
 public class HitDetection : MonoBehaviour
 {
-    public static bool ded;
-    public Animator anim;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static bool ded = false;
+    public static int score;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
+            GameObject[] applesToDestroy = GameObject.FindGameObjectsWithTag("Apples");
+            ded = true;
             //start player death animation
-            anim.SetBool("idle", false);
-            anim.SetBool("death", true);
-
-            //show death gui
-
-            //destroy apple + player
-            Destroy(this.gameObject);
+            
+            for (int i = 0; i < applesToDestroy.Length; i++) {
+                Destroy(applesToDestroy[i]);
+            }
             Destroy(player);
 
-            ded = true;
+            //show death screen
+
         } else if(collision.gameObject.CompareTag("Shield"))
         {
-
-            //destroy apple
             Destroy(this.gameObject);
+
+            score++;
         }
     }
 }

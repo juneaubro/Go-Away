@@ -17,35 +17,46 @@ public class AppleSpawn : MonoBehaviour
 
     void SpawnApple()
     {
-        GameObject temp;
-        int randomValue = Random.Range(0, 4);
-        switch(randomValue)
+        if (HitDetection.ded == false)
         {
-            //top wall
-            case 0:
-                temp = Instantiate(apple, new Vector3(Random.Range(minX, maxX), maxY, 0), Quaternion.identity);
-                temp.GetComponent<Rigidbody2D>().velocity = -Vector2.Lerp(temp.transform.position,Vector2.zero, -.03f) * appleSpeed;
-                break;
-            //bottom wall
-            case 1:
-                temp = Instantiate(apple, new Vector3(Random.Range(minX, maxX), minY, 0), Quaternion.identity);
-                temp.GetComponent<Rigidbody2D>().velocity = -Vector2.Lerp(temp.transform.position, Vector2.zero, -.03f) * appleSpeed;
-                break;
+            GameObject temp;
+            int randomValue = Random.Range(0, 4);
+
+            switch (randomValue)
+            {
+                //top wall
+                case 0:
+                    //spawn apple with random starting rotation at border
+                    temp = Instantiate(apple, new Vector3(Random.Range(minX, maxX), maxY, 0), Quaternion.Euler(new Vector3(0, 0, Random.Range(0, 360))));
+                    //add velocity to 'push' apple to 0,0,0 at appleSpeed
+                    temp.GetComponent<Rigidbody2D>().velocity = -Vector2.Lerp(temp.transform.position, Vector2.zero, -.03f) * appleSpeed;
+                    //YOU SPIN ME RIGHT ROUND BABY
+                    temp.GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-360, 360);
+                    break;
+                //bottom wall
+                case 1:
+                    temp = Instantiate(apple, new Vector3(Random.Range(minX, maxX), minY, 0), Quaternion.Euler(new Vector3(0, 0, Random.Range(0, 360))));
+                    temp.GetComponent<Rigidbody2D>().velocity = -Vector2.Lerp(temp.transform.position, Vector2.zero, -.03f) * appleSpeed;
+                    temp.GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-360, 360);
+                    break;
                 //left wall
-            case 2:
-                temp = Instantiate(apple, new Vector3(minX, Random.Range(minY, maxY), 0), Quaternion.identity);
-                temp.GetComponent<Rigidbody2D>().velocity = -Vector2.Lerp(temp.transform.position, Vector2.zero, -.03f) * appleSpeed;
-                break;
+                case 2:
+                    temp = Instantiate(apple, new Vector3(minX, Random.Range(minY, maxY), 0), Quaternion.Euler(new Vector3(0, 0, Random.Range(0, 360))));
+                    temp.GetComponent<Rigidbody2D>().velocity = -Vector2.Lerp(temp.transform.position, Vector2.zero, -.03f) * appleSpeed;
+                    temp.GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-360, 360);
+                    break;
                 //right wall
-            case 3:
-                temp = Instantiate(apple, new Vector3(maxX, Random.Range(minY, maxY), 0), Quaternion.identity);
-                temp.GetComponent<Rigidbody2D>().velocity = -Vector2.Lerp(temp.transform.position, Vector2.zero, -.03f) * appleSpeed;
-                break;
-            default:
-                break;
+                case 3:
+                    temp = Instantiate(apple, new Vector3(maxX, Random.Range(minY, maxY), 0), Quaternion.Euler(new Vector3(0, 0, Random.Range(0, 360))));
+                    temp.GetComponent<Rigidbody2D>().velocity = -Vector2.Lerp(temp.transform.position, Vector2.zero, -.03f) * appleSpeed;
+                    temp.GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-360, 360);
+                    break;
+                default:
+                    break;
+            }
+            // RECURSION BBY
+            Invoke("SpawnApple", appleDelay);
         }
-        // RECURSION BBY
-        Invoke("SpawnApple", appleDelay);
     }
 
     public void Update()
