@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Apples
   - Shield
+  - Score
   layers:
   - Default
   - TransparentFX

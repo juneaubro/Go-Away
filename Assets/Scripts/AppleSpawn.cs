@@ -67,12 +67,15 @@ public class AppleSpawn : MonoBehaviour
 
     public IEnumerator appleSpeedIncrease()
     {
-        //NO TOUCH GO AWAY
-        pause = !pause;
-        yield return new WaitForSecondsRealtime(delayTime);
-        delayTime *= 2;
-        Debug.Log(delayTime +  " : " + appleDelay);
-        appleDelay -= .3f;
-        pause = !pause;
+        if (HitDetection.ded == false)
+        {
+            //NO TOUCH GO AWAY
+            pause = !pause;
+            yield return new WaitForSecondsRealtime(delayTime);
+            delayTime *= 2;
+            Debug.Log(delayTime + " : " + appleDelay);
+            appleDelay -= .3f;
+            pause = !pause;
+        }
     }
 }
